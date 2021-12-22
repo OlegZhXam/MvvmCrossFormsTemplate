@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<myviews:BaseContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Class="MvvmCrossFormsTemplate.UI.Views.LoginPage"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:myviews="clr-namespace:MvvmCrossFormsTemplate.UI.Views;assembly=MvvmCrossFormsTemplate.UI"
+    xmlns:controls="clr-namespace:MvvmCrossFormsTemplate.UI.Controls;assembly=MvvmCrossFormsTemplate.UI"
+    xmlns:viewModels="clr-namespace:MvvmCrossFormsTemplate.UI.ViewModels;assembly=MvvmCrossFormsTemplate.UI"
+    xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+    x:TypeArguments="viewModels:LoginViewModel"
+    x:DataType="viewModels:LoginViewModel"
+    NavigationPage.HasNavigationBar="False">
+
+    <Grid Padding="0" HorizontalOptions="FillAndExpand" >
+        <controls:FFImage
+            Aspect="AspectFit"
+            HorizontalOptions="End"
+            VerticalOptions="Start"
+            DownsampleToViewSize="False"
+            Source="login_background"
+            HeightRequest="460"
+            WidthRequest="320"/>
+
+        <StackLayout
+            Padding="16,0,16,0"
+            Spacing="0"
+            Orientation="Vertical"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Welcome!"
+                FontAttributes="Bold"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="24" />
+
+            <controls:CustomEntry
+                Style="{StaticResource BaseCustomEntry}"
+                Placeholder="Email"
+                Keyboard="Email"
+                Text="{Binding Email}"
+                Margin="0,56,0,21" />
+
+            <controls:CustomEntry
+                Style="{StaticResource BaseCustomEntry}"
+                Placeholder="Password"
+                Text="{Binding Password}"
+                IsPassword="{Binding HidePassword}"
+                RightIconImage="{Binding PasswordImage}"
+                RightIconCommand="{Binding TogglePasswordVisibilityCommand}"
+                Margin="0,0,0,21" />
+
+            <Button
+                Style="{StaticResource BaseButton}"
+                Text="Next"
+                IsEnabled="{Binding CanProceed}"
+                Command="{Binding TryLoginCommand}" />
+
+        </StackLayout>
+    </Grid>
+</myviews:BaseContentPage>

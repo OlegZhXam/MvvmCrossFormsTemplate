@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:mvxcore="clr-namespace:MvvmCross.Forms.Core;assembly=MvvmCross.Forms"
+    xmlns:controls="clr-namespace:MvvmCrossFormsTemplate.UI.Controls;assembly=MvvmCrossFormsTemplate.UI"
+    xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
+    xmlns:mtrl="clr-namespace:XF.Material.Forms.Resources;assembly=XF.Material"
+    x:Class="MvvmCrossFormsTemplate.UI.AppForms">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="ColorBackground">#D9E7F2</Color>
+
+            <Color x:Key="Gray">#80878E</Color>
+            <Color x:Key="LightGray">#BFC3C7</Color>
+            <Color x:Key="Green">#27BC63</Color>
+            <Color x:Key="Red">#E95F5B</Color>
+
+            <Color x:Key="Accent">#27BCBC</Color>
+            <Color x:Key="AccentDark">#569AFF</Color>
+
+            <!--<Style TargetType="NavigationPage" ApplyToDerivedTypes="True">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+            </Style>-->
+
+            <Style TargetType="controls:CustomEntry" x:Key="BaseCustomEntry" ApplyToDerivedTypes="True">
+                <Setter Property="TextFontSize" Value="18"/>
+                <Setter Property="CornerRadius" Value="8"/>
+                <Setter Property="PlaceholderColor" Value="{StaticResource Gray}"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="HeightRequest" Value="64"/>
+            </Style>
+
+            <Style TargetType="Button" x:Key="BaseButton" ApplyToDerivedTypes="True">
+                <Setter Property="Visual" Value="Material"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="CornerRadius" Value="12"/>
+                <Setter Property="BackgroundColor" Value="{x:StaticResource Accent}"/>
+                <Setter Property="HeightRequest" Value="54"/>
+                <Setter Property="TextTransform" Value="None"/>
+            </Style>
+
+            <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+                <Setter Property="Background">
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#F5F5FC" Offset="0.1" />
+                        <GradientStop Color="{StaticResource ColorBackground}" Offset="1" />
+                    </LinearGradientBrush>
+                </Setter>
+            </Style>
+
+            <mtrl:MaterialColorConfiguration
+                x:Key="Material.Color"
+                Primary="{StaticResource AccentDark}"
+                PrimaryVariant="{StaticResource Accent}"
+                Secondary="{StaticResource AccentDark}"
+                SecondaryVariant="{StaticResource AccentDark}"/>
+                <!--Background="#EAEAEA"
+                Error="#B00020"
+                OnBackground="#000000"
+                OnError="#FFFFFF"
+                OnPrimary="#FFFFFF"
+                OnSecondary="#FFFFFF"
+                OnSurface="#000000"
+                Secondary="#063852"
+                SecondaryVariant="#001229"
+                Surface="#FFFFFF"-->
+
+            <mtrl:MaterialConfiguration
+                x:Key="Material.Configuration"
+                ColorConfiguration="{StaticResource Material.Color}" />
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

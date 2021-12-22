@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>UIDeviceFamily</key>
+    <array>
+        <integer>1</integer>
+        <integer>2</integer>
+    </array>
+    
+    <key>MinimumOSVersion</key>
+    <string>13.1</string>
+    <key>CFBundleDisplayName</key>
+    <string>MvvmCrossFormsTemplate</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.mvvmcrosstemplate.forms</string>
+    <key>CFBundleVersion</key>
+    <string>1.0</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>CFBundleName</key>
+    <string>MvvmCrossFormsTemplate</string>
+    <key>XSAppIconAssets</key>
+    <string>Assets.xcassets/AppIcon.appiconset</string>
+
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>App requires access to the Bluetooth for printing</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>App requires access to the Bluetooth for printing</string>
+    <key>NSCameraUsageDescription</key>
+    <string>App requires access to the camera to scan barcodes and take photos</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>App uses microphone for camera</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>App requires access to the photo gallery to save photos.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>App requires access to photos to display taken pictures.</string>
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>external-accessory</string>
+        <string>remote-notification</string>
+        <string>bluetooth-central</string>
+    </array>
+    <key>UISupportedExternalAccessoryProtocols</key>
+    <array>
+        <string>com.zebra.rawport</string>
+        <string>com.zebra.protocols</string>
+    </array>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+    </array>
+    <key>UIUserInterfaceStyle</key>
+    <string>Light</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+</dict>
+</plist>
